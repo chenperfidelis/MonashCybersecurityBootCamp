@@ -68,12 +68,12 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it ensured that the setup was consistent and reduces errors and variations between ELK machines.
 
 The playbook implements the following tasks:
-- Install docker.io using the apt module
-- Install python3-pip via the apt module
-- Install docker via the pip module
-- Set docker to start on start of the VM via the systemd module
-- Increase virtual memory of the VM and set to use more memory via systemctl
-- Download and launch the docker elk container and publishing ports: 5601, 9200 and 5044
+- Install `docker.io` using the `apt` module
+- Install `python3-pip` via the `apt` module
+- Install `docker` via the `pip` module
+- Set `docker` to start on start of the VM via the `systemd` module
+- Increase virtual memory of the VM and set to use more memory via `systemctl`
+- Download and launch the `docker elk container` and publishing ports: 5601, 9200 and 5044
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -95,19 +95,30 @@ We have installed the following Beats on these machines:
 | Web-3    | FileBeat 7.4.0 and MetricBeat 7.6.1 | 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- The `FileBeat` module collects log data and events whereas the `MetricBeat` module collects metrics and statistics, for example: CPU, memory and data related to services running on the server.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the YAML (.yml) file to `/etc/ansible`.
+- Update the `/etc/ansible/host` file to include:
+  ```
+  [webservers]
+  10.1.0.6 ansible_python_interpreter=/usr/bin/python3
+  10.1.0.7 ansible_python_interpreter=/usr/bin/python3
+  10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+  [elk]
+  10.0.0.4 ansible_python_interpreter=/usr/bin/python3
+  ```
+  - where the IP addresses are the IP addresses of your Web Servers and ELK server
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- Run the playbook, and navigate to `http://20.36.47.84:5601/app/kibana` (where the IP address is the public IP address of your ElasticStack server) to check that the installation worked as expected.
+
+
+
+
+
+
+<!---_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._--->
