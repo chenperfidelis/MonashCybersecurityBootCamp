@@ -36,7 +36,7 @@ Surveys will be conducted to confirm that employee devices are set up correctly.
 		- No non-approved apps installed on the device.
 
 
-### 4. 
+### 4. Goal for the organization to reach regarding behaviour.
    The goal regarding this behaviour is to have the company reach 100% on the surveys or reduce the number of employees using their own personal device for work-related activities. This would ensure that all employees are invested in the company’s security and behaving securely. By aiming to reach 100% on the survey, we are ensuring that the personal devices which are being used for work purposes are secure therefore protecting the organisation from data breaches, and by aiming to reduce the number of employees who are using their own personal devices for work purposes by at least 5%, we reduce the potential number of points of failure.
 
 
