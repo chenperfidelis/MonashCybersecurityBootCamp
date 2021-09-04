@@ -1,4 +1,11 @@
-# Week 4 Homework: Linux Systems Administration
+# Week 4: Linux Systems Administration
+
+## Security+ Domains
+- This unit covered portions of the following domains on the Security+ exam:
+    - **2.0 Architecture and Design**
+    - **3.0 Implementation**
+
+
 ## Scenario 
 In the previous class activities, you acted as system administrator in order to troubleshoot a malfunctioning server.
 

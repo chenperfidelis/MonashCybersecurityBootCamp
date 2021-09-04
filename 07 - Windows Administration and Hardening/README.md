@@ -1,5 +1,10 @@
 # Week 7: A Day in the Life of a Windows Sysadmin
 
+## Security+ Domains
+- This unit covered Windows-based portions of the following domains on the Security+ exam:
+    - **2.0 Architecture and Design**
+    - **3.0 Implementation**
+
 Tasks completed:
 1. Create a GPO: Disable Local Link Multicast Name Resolution (LLMNR)
     - ![GroupPolicyObjects](./Task1/Task_1_GroupPolicyObjects.png)

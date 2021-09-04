@@ -39,6 +39,7 @@
 ### Run SYN Scan against IP 167.172.144.11
 - Command run:
     `sudo nmap -sS 167.172.144.11`
+    
     ![sudo nmap](./Images/sudo_nmap.png)
 
 #### Result from SYN SCAN

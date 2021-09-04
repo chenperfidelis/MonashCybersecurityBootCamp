@@ -1,4 +1,4 @@
-# Week 1 Security 101 Homework: Security Reporting
+# Week 1 Security 101: Security Reporting
 
 - In the first homework, we read through four prominent security reports and answered questions in order to get a basic understanding of the market. 
 

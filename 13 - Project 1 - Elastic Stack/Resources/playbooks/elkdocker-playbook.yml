@@ -1,0 +1,28 @@
+---
+  - name: Docker on ELK
+    hosts: elk
+    become: true
+    tasks:
+
+    - name: Install docker.io
+      apt:
+        name: docker.io
+        state: present
+        force_apt_get: yes
+        update_cache: yes
+
+    - name: Install Python3
+      apt:
+        name: python3-pip
+        state: present
+        force_apt_get: yes
+
+    - name: Install docker
+      pip:
+        name: docker
+        state: present
+
+    - name: Start Docker on VM start
+      systemd:
+        name: docker
+        enabled: yes

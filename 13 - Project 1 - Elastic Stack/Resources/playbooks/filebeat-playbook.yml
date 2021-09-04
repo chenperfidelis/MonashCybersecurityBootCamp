@@ -1,0 +1,44 @@
+---
+  - name: installing and launching filebeat
+    hosts: webservers
+    become: yes
+    tasks:
+
+    - name: download filebeat deb
+      command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+
+    - name: install filebeat deb
+      command: dpkg -i filebeat-7.4.0-amd64.deb
+
+#    - name: drop in filebeat.yml
+#      copy:
+#        src: /etc/ansible/files/filebeat-config.yml
+#        dest: /etc/filebeat/filebeat.yml
+
+    - name: Update setup.kibana in /etc/filebeat/filebeat.yml
+      replace:
+        path: /etc/filebeat/metricbeat.yml
+        regexp: '(\s+)#host: "localhost:5601"(\s+.*)?$'
+        replace: '\1host: "10.0.0.4:5601"\2'
+        backup: yes
+
+    - name: Update output.elasticsearch in /etc/filebeat/filebeat.yml
+      replace:
+        path: /etc/filebeat/filebeat.yml
+        regexp: '(\s+)hosts: \["localhost:9200"\](\s+.*)?$'
+        replace: '\1hosts: ["10.0.0.4:9200"]\2'
+        backup: yes
+
+    - name: enable and configure system module
+      command: filebeat modules enable system
+
+    - name: setup filebeat
+      command: filebeat setup
+
+    - name: start filebeat service
+      command: service filebeat start
+
+    - name: enable service filebeat on boot
+      systemd:
+        name: filebeat
+        enabled: yes

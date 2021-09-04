@@ -1,4 +1,8 @@
-# Week 3 Homework: A High Stakes Investigation
+# Week 3: A High Stakes Investigation
+
+## Security+ Domains Covered
+- This unit covered portions of the following domains on the Security+ exam:
+    - **2.0 Architecture and Design**
 
 This weeks tasks:
 1. Work as a security analyst to analyse provided data
