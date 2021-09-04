@@ -8,5 +8,5 @@
 
 Files:
 1. [Symantec Internet Security Threat Report Worksheet](SymantecInternetSecurityThreatReportWorksheet.md)
-2. [Akamai Security Report Worksheet]("AkamaiSecurityReportWorksheet.md)
+2. [Akamai Security Report Worksheet](AkamaiSecurityReportWorksheet.md)
 3. [Verizon Report Worksheet](VerizonReportWorksheet.md)
