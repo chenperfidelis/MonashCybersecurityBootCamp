@@ -31,7 +31,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log data and system metrics.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems and system metrics.
 
 The configuration details of each machine may be found below.
 
@@ -47,7 +47,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the `Jump-Box-Provisioner` machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 103.217.167.32
 
 Machines within the network can only be accessed by Ansible docker container on the Jump-Box-Provisioner on the IP, 10.1.0.5.
@@ -95,13 +95,13 @@ We have installed the following Beats on these machines:
 | Web-3    | FileBeat 7.4.0 and MetricBeat 7.6.1 | 
 
 These Beats allow us to collect the following information from each machine:
-- The `FileBeat` module collects log data and events whereas the `MetricBeat` module collects metrics and statistics, for example: CPU, memory and data related to services running on the server.
+- The `FileBeat` module detects changes to file system and collects log data and events whereas the `MetricBeat` module collects metrics and statistics, for example: CPU, memory and data related to services running on the server.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the YAML (.yml) file to `/etc/ansible`.
+- Copy the YAML playbook (.yml) file to `/etc/ansible`.
 - Update the `/etc/ansible/host` file to include:
   ```
   [webservers]
