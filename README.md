@@ -39,10 +39,10 @@ Monash University Cybersecurity Boot Camp
 
 ### Unit 13: Project Week 1
 - [Homework Assignment](/13%20-%20Project%201%20-%20Elastic%20Stack/README.md)
-<!--
-### Unit 14: Web Development
-- [~~Homework Assignment~~](14 - Web Development)
 
+### Unit 14: Web Development
+- [Homework Assignment](/14%20-%20Web%20Development/README.md)
+<!--
 ### Unit 15: Web Vulnerabilities and Hardening
 - [~~Homework Assignment~~](15 - Web Vulnerabilities and Hardening)
 
