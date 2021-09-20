@@ -45,28 +45,28 @@ Monash University Cybersecurity Boot Camp
 
 ### Unit 15: Web Vulnerabilities and Hardening
 - [Homework Assignment](/15%20-%20Web%20Vulnerabilities%20and%20Hardening/README.md)
-<!--
-### Unit 16: Penetration Testing 1
-- [Homework Assignment](16 - Penetration Testing)
 
+### Unit 16: Penetration Testing 1
+- [Homework Assignment](/16%20-%20Penetration%20Testing)
+<!--
 ### Unit 17: Penetration Testing 2
 - [Homework Assignment](17 - Penetration Testing 2)
-
+<!--
 ### Unit 18: SIEMs
 - [Homework Assignment](18 - SIEMs)
-
+<!--
 ### Unit 19: SIEMs 2
 - [Homework Assignment](19 - SIEMs 2)
-
+<!--
 ### Unit 20: Project Week 2
 - [~~Day 1-3~~](20 - Red vs. Blue Project)
-
+<!--
 ### Unit 21: Digital Forensics
 - [Homework Assignment](21 - Digital Forensics)
-
+<!--
 ### Unit 22: Certification Prep
 - [Homework Assignment](22 - Certification Prep)
-
+<!--
 ### Unit 23: Career Prep
 - [Homework Assignment](23 - Career Prep)
 >
