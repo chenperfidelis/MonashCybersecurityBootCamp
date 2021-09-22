@@ -78,23 +78,26 @@ Is Altoro Mutual vulnerable to XSS:
 Your client has asked that you help identify any vulnerabilities with their file-sharing server. Using the Metasploitable machine to act as your client's server, complete the following:
 
 - Command for Zenmap to run a service scan against the Metasploitable machine: 
+
   ![Zenmap Scan](./Images/5.1.zenmap.png)
     ```
     nmap -T4 -A -v -oN zenmapscan.txt 192.168.0.10
     ``` 
   - Bonus command to output results into a new text file named `zenmapscan.txt`: ``-oN zenmapscan.txt``
-  ![Zenmap Scan with export](./Images/5.1.zenmap.zenmapscan.png)
+  
+    ![Zenmap Scan with export](./Images/5.1.zenmap.zenmapscan.png)
 - Zenmap vulnerability script command:
+  
   ![Zenmap Script](./Images/5.1.zenmap.script.png)
 - Once you have identified this vulnerability, answer the following questions for your client:
-  1. What is the vulnerability:
+1. What is the vulnerability:
     - Samba 3.0.20
-    - Users are able to read/write to `\\192.168.0.10\tmp` (`C:\tmp`)
+    - Anonymous users are able to read/write to `\\192.168.0.10\tmp` (`C:\tmp`)
 
-  2. Why is it dangerous:
+2. Why is it dangerous:
     - Attackers would be able to write malicious files/codes to the folder to be executed
 
-  3. What mitigation strategies can you recommendations for the client to protect their server:
+3. What mitigation strategies can you recommendations for the client to protect their server:
     - Prevent read/write to directories by anonymous users
     - Updated to the latest version of SMB
     - Utilise a firewall to prevent access from unauthorised IP addresses
