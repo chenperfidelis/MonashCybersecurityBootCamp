@@ -7,7 +7,6 @@ Utilize your Splunk skills to design a powerful monitoring solution to protect V
 
 ## Vandalay Industries Monitoring Activity Instructions
 
----
 ### Step 1: The Need for Speed 
 
 **Background**: As the worldwide leader of importing and exporting, Vandalay Industries has been the target of many adversaries attempting to disrupt their online business. Recently, Vandalay has been experiencing DDOS attacks against their web servers.
