@@ -51,9 +51,9 @@ Monash University Cybersecurity Boot Camp
 
 ### Unit 17: Penetration Testing 2
 - [Homework Assignment](/17%20-%20Penetration%20Testing%202)
-<!--
+
 ### Unit 18: SIEMs
-- [Homework Assignment](18 - SIEMs)
+- [Homework Assignment](/18%20-%20SIEMs)
 <!--
 ### Unit 19: SIEMs 2
 - [Homework Assignment](19 - SIEMs 2)
