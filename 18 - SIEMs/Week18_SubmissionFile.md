@@ -30,7 +30,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
     - `UPLOAD_MEGABITS`
     - `ratio`
   
-   - ![SPL table command](/Images/Step1Q3.png)
+   - ![SPL table command](Images/Step1Q3.png)
 
 4. Answer the following questions:
 
