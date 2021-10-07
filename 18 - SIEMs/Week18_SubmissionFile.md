@@ -3,9 +3,10 @@
 ### Your Objective 
 
 Utilize your Splunk skills to design a powerful monitoring solution to protect Vandaly from security attacks.
----
+
 
 ## Vandalay Industries Monitoring Activity Instructions
+
 ---
 ### Step 1: The Need for Speed 
 
