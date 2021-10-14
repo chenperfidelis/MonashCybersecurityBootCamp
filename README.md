@@ -54,9 +54,9 @@ Monash University Cybersecurity Boot Camp
 
 ### Unit 18: SIEMs
 - [Homework Assignment](/18%20-%20SIEMs)
-<!--
+
 ### Unit 19: SIEMs 2
-- [Homework Assignment](19 - SIEMs 2)
+- [Homework Assignment](/19%20-%20SIEMs%202)
 <!--
 ### Unit 20: Project Week 2
 - [~~Day 1-3~~](20 - Red vs. Blue Project)
