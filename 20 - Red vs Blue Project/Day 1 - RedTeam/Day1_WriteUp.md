@@ -363,7 +363,7 @@ Saved as: rvb.php
 ### Transferred php payload
 ![](Images/rvb.php.png)
 
-## start metasploit
+## Start msfconsole
 ```
 root@Kali:~# msfconsole
 [-] ***rting the Metasploit Framework console...\
@@ -401,6 +401,10 @@ msf5 exploit(multi/handler) > exploit
 ```
 
 ## Execute payload that you uploaded to the site to open up a meterpreter session
+![](Images/curl.png)
+
+- via browser
+
 ![](Images/Execute_Payload.png)
 
 ## Capture the flag
