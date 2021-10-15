@@ -403,7 +403,7 @@ msf5 exploit(multi/handler) > exploit
 ## Execute payload that you uploaded to the site to open up a meterpreter session
 ![](Images/curl.png)
 
-- via browser
+- also tested via browser
 
 ![](Images/Execute_Payload.png)
 
