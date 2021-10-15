@@ -4,15 +4,15 @@
 ```
 root@Kali:~# netdiscover -r 192.168.0.0/16
 
- Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                            
-                                                                                                                                          
- 3 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 126                                                                          
+ Currently scanning: Finished!   |   Screen View: Unique Hosts
+
+ 3 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 126
  _____________________________________________________________________________
    IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
  -----------------------------------------------------------------------------
- 192.168.1.1     00:15:5d:00:04:0d      1      42  Microsoft Corporation                                                                  
- 192.168.1.100   4c:eb:42:d2:d5:d7      1      42  Intel Corporate                                                                        
- 192.168.1.105   00:15:5d:00:04:0f      1      42  Microsoft Corporation                                                                  
+ 192.168.1.1     00:15:5d:00:04:0d      1      42  Microsoft Corporation
+ 192.168.1.100   4c:eb:42:d2:d5:d7      1      42  Intel Corporate
+ 192.168.1.105   00:15:5d:00:04:0f      1      42  Microsoft Corporation
 
 ```
 
@@ -36,25 +36,25 @@ Online devices
     135/tcp  open  msrpc         Microsoft Windows RPC
     139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
     445/tcp  open  microsoft-ds?
-    2179/tcp open  vmrdp?                                                                                                                      
-    3389/tcp open  ms-wbt-server Microsoft Terminal Services                                                                                   
-    | rdp-ntlm-info:                                                                                                                           
-    |   Target_Name: ML-RefVm-684427                                                                                                           
-    |   NetBIOS_Domain_Name: ML-RefVm-684427                                                                                                   
-    |   NetBIOS_Computer_Name: ML-RefVm-684427                                                                                                 
-    |   DNS_Domain_Name: ML-RefVm-684427                                                                                                       
-    |   DNS_Computer_Name: ML-RefVm-684427                                                                                                     
-    |   Product_Version: 10.0.18362                                                                                                            
-    |_  System_Time: 2021-10-15T10:45:04+00:00                                                                                                 
-    | ssl-cert: Subject: commonName=ML-RefVm-684427                                                                                            
-    | Not valid before: 2021-09-25T04:58:57                                                                                                    
-    |_Not valid after:  2022-03-27T04:58:57                                                                                                    
-    |_ssl-date: 2021-10-15T10:45:43+00:00; 0s from scanner time.                                                                               
-    MAC Address: 00:15:5D:00:04:0D (Microsoft)                                                                                                 
-    Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port                                      
-    Device type: general purpose                                                                                                               
-    Running (JUST GUESSING): Microsoft Windows XP|7|2008 (87%)                                                                                 
-    OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2                                                                                                                                 
+    2179/tcp open  vmrdp?
+    3389/tcp open  ms-wbt-server Microsoft Terminal Services
+    | rdp-ntlm-info:
+    |   Target_Name: ML-RefVm-684427
+    |   NetBIOS_Domain_Name: ML-RefVm-684427
+    |   NetBIOS_Computer_Name: ML-RefVm-684427
+    |   DNS_Domain_Name: ML-RefVm-684427
+    |   DNS_Computer_Name: ML-RefVm-684427
+    |   Product_Version: 10.0.18362
+    |_  System_Time: 2021-10-15T10:45:04+00:00
+    | ssl-cert: Subject: commonName=ML-RefVm-684427
+    | Not valid before: 2021-09-25T04:58:57
+    |_Not valid after:  2022-03-27T04:58:57
+    |_ssl-date: 2021-10-15T10:45:43+00:00; 0s from scanner time.
+    MAC Address: 00:15:5D:00:04:0D (Microsoft)
+    Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+    Device type: general purpose
+    Running (JUST GUESSING): Microsoft Windows XP|7|2008 (87%)
+    OS CPE: cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2
     Aggressive OS guesses: Microsoft Windows XP SP2 (87%), Microsoft Windows 7 (85%), Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2 (85%)
     No exact OS matches for host (test conditions non-ideal).
     Network Distance: 1 hop
@@ -281,12 +281,12 @@ Online devices
 
     -----------------
 
-    GENERATED WORDS: 4612                                                          
+    GENERATED WORDS: 4612
 
     ---- Scanning URL: http://192.168.1.105/ ----
-    + http://192.168.1.105/server-status (CODE:403|SIZE:278)                                                                                  
-    + http://192.168.1.105/webdav (CODE:401|SIZE:460)                                                                                         
-                                                                                                                                            
+    + http://192.168.1.105/server-status (CODE:403|SIZE:278)
+    + http://192.168.1.105/webdav (CODE:401|SIZE:460)
+
     -----------------
     END_TIME: Thu Oct 14 21:02:09 2021
     DOWNLOADED: 4612 - FOUND: 2
