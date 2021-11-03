@@ -57,16 +57,16 @@ Monash University Cybersecurity Boot Camp
 
 ### Unit 19: SIEMs 2
 - [Homework Assignment](/19%20-%20SIEMs%202)
-<!--
+
 ### Unit 20: Project Week 2
-- [~~Day 1-3~~](20 - Red vs. Blue Project)
-<!--
+- [~~Day 1-3~~](/20%20-%20Red%20vs%20Blue%20Project)
+
 ### Unit 21: Digital Forensics
-- [Homework Assignment](21 - Digital Forensics)
+- [Homework Assignment](/21%20-%20Digital%20Forensics)
 <!--
 ### Unit 22: Certification Prep
-- [Homework Assignment](22 - Certification Prep)
+- [Homework Assignment](/22%20-%20Certification%20Prep)
 <!--
 ### Unit 23: Career Prep
-- [Homework Assignment](23 - Career Prep)
+- [Homework Assignment](/23%20-%20Career%20Prep)
 >
