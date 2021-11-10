@@ -63,10 +63,12 @@ Monash University Cybersecurity Boot Camp
 
 ### Unit 21: Digital Forensics
 - [Homework Assignment](/21%20-%20Digital%20Forensics)
-<!--
+
 ### Unit 22: Certification Prep
-- [Homework Assignment](/22%20-%20Certification%20Prep)
-<!--
+- No Homework Assignment
+
 ### Unit 23: Career Prep
-- [Homework Assignment](/23%20-%20Career%20Prep)
->
+- No Homework Assignment
+
+### Unit 24: Final Project
+- [Homework Assignment](/24%20-%20Final%20Project)
