@@ -139,7 +139,7 @@ This scan identifies the services below as potential points of entry:
 The following vulnerabilities were identified on each target:
 - Target 1
 
-```
+```bash
 # Nmap 7.80 scan initiated Tue Nov  9 23:09:00 2021 as: nmap -sV --script vuln -oN vulns.txt 192.168.1.110
 Nmap scan report for target1 (192.168.1.110)
 Host is up (0.0025s latency).
