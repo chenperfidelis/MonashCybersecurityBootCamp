@@ -49,7 +49,7 @@ HTTP Request Size Monitor is implemented as follows:
   - **Vulnerability Mitigated**: Website scanning with wpscan
   - **Reliability**: The threshold for this alert was set low and have generated a number of false positives
   <br>
-  ![http-request-size-monitor](Images/http-request-size-monitor.png)
+  ![http request size monitor](Images/http-request-size-monitor.png)
 
 #### Excessive HTTP Errors
 Excessive HTTP Errors is implemented as follows:
@@ -58,7 +58,7 @@ Excessive HTTP Errors is implemented as follows:
   - **Vulnerability Mitigated**: Brute force of directories on web and application servers
   - **Reliability**: The alert was set at a reasonable threshold and is reliable to pick up brute force attacks on the server by detecting error 404
   <br>
-  ![excessive-http-errors](Images/excessive-http-errors.png)
+  ![excessive http errors](Images/excessive-http-errors.png)
 
 #### CPU Usage Monitor
 CPU Usage Monitor is implemented as follows:
@@ -67,7 +67,7 @@ CPU Usage Monitor is implemented as follows:
   - **Vulnerability Mitigated**: Configuration of resource management 
   - **Reliability**: As there were many false positives from the configuration, this setup is not reliable
   <br>
-  ![cpu-usage-monitor](Images/cpu-usage-monitor.png)
+  ![cpu usage monitor](Images/cpu-usage-monitor.png)
 
 ### Suggestions for Going Further
 - Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it.
