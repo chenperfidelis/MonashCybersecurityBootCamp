@@ -47,8 +47,7 @@ HTTP Request Size Monitor is implemented as follows:
   - **Metric**: http.request.bytes
   - **Threshold**: 3500
   - **Vulnerability Mitigated**: Website scanning with wpscan
-  - **Reliability**: The threshold for this alert was set low and have generated a number of false positives
-  <br>
+  - **Reliability**: The threshold for this alert was set low and have generated a number of false positives <br>
   ![http request size monitor](Images/http-request-size-monitor.png)
 
 #### Excessive HTTP Errors
@@ -56,8 +55,7 @@ Excessive HTTP Errors is implemented as follows:
   - **Metric**: http.response.status_code
   - **Threshold**: 400
   - **Vulnerability Mitigated**: Brute force of directories on web and application servers
-  - **Reliability**: The alert was set at a reasonable threshold and is reliable to pick up brute force attacks on the server by detecting error 404
-  <br>
+  - **Reliability**: The alert was set at a reasonable threshold and is reliable to pick up brute force attacks on the server by detecting error 404 <br>
   ![excessive http errors](Images/excessive-http-errors.png)
 
 #### CPU Usage Monitor
@@ -65,8 +63,7 @@ CPU Usage Monitor is implemented as follows:
   - **Metric**: system.process.cpu.total.pct
   - **Threshold**: 0.5
   - **Vulnerability Mitigated**: Configuration of resource management 
-  - **Reliability**: As there were many false positives from the configuration, this setup is not reliable
-  <br>
+  - **Reliability**: As there were many false positives from the configuration, this setup is not reliable <br>
   ![cpu usage monitor](Images/cpu-usage-monitor.png)
 
 ### Suggestions for Going Further
