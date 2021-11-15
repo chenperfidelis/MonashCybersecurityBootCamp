@@ -4,11 +4,11 @@
 - [Network Topology](#network-topology)
 - [Description of Targets](#description-of-targets)
 - [Monitoring the Targets](#monitoring-of-targets)
-- [Patterns of Traffic & Behavior](#patterns-of-traffic-&-behaviour)
 - [Suggestions for Going Further](#suggestion-for-going-further)
 
 
 ### Network Topology
+![network diagram](Images/networkdiagram.png)
 
 The following machines were identified on the network:
 - ELK
@@ -46,34 +46,64 @@ Traffic to these services should be carefully monitored. To this end, we have im
 HTTP Request Size Monitor is implemented as follows:
   - **Metric**: http.request.bytes
   - **Threshold**: 3500
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+  - **Vulnerability Mitigated**: Website scanning with wpscan
+  - **Reliability**: The threshold for this alert was set low and have generated a number of false positives
+  <br>
+  ![http-request-size-monitor](Images/http-request-size-monitor.png)
 
 #### Excessive HTTP Errors
 Excessive HTTP Errors is implemented as follows:
   - **Metric**: http.response.status_code
   - **Threshold**: 400
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+  - **Vulnerability Mitigated**: Brute force of directories on web and application servers
+  - **Reliability**: The alert was set at a reasonable threshold and is reliable to pick up brute force attacks on the server by detecting error 404
+  <br>
+  ![excessive-http-errors](Images/excessive-http-errors.png)
 
 #### CPU Usage Monitor
 CPU Usage Monitor is implemented as follows:
-  - **Metric**: system.process.cpu.total
+  - **Metric**: system.process.cpu.total.pct
   - **Threshold**: 0.5
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+  - **Vulnerability Mitigated**: Configuration of resource management 
+  - **Reliability**: As there were many false positives from the configuration, this setup is not reliable
+  <br>
+  ![cpu-usage-monitor](Images/cpu-usage-monitor.png)
 
-### Suggestions for Going Further (Optional)
-_TODO_: 
-- Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
+### Suggestions for Going Further
+- Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it.
 
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
-- Vulnerability 1
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 2
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 3
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
+- Enumeration of users with WPScan
+  - **Set up Varnish for the Wordpress server**
+    - in sub vcl_recv
+      ```
+      #stop wpscan user enumeration
+      if (req.url ~ "\?author\=([0-9]*)") {
+          error 403 "Not allowed";
+      }
+
+      #to stop wpscan advanced enumeration
+
+      if (req.url == "/" && req.request == "POST" && !req.http.cookie ~ "wordpress_logged_in") {
+          error 403 "Not allowed";
+      }
+      ```
+  - **Why It Works**: It prevents WPScan from accessing the requested author URLs and also prevents enumeration via the POST method
+
+- Brute force of directories on web and application servers
+  - **Implementing a Web Application Firewall (WAF)**
+    - Signature detection
+    - IP whitelisting
+    - Protected pages
+    - Bot blocking
+  - **Why It Works**: 
+    - The signature detection will block against known attacks
+    - IP white listing allows only access by the website administrators - this could block access from IPs other than those originating from known sources
+    - Protected pages with the use of multifactor authentication can prevent bots accessing pages with sensitive information
+    - Bot blocking will automatically block known malicious bots and hacker tools from attacking the site
+
+- Resource management 
+  - **Set up load balancer with multiple servers in the server pool**
+  - **Why It Works**: 
+    - Ensuring that not one server is overloaded and affecting the availability of the content of the server
+    - By implementing a load balancer, this will ensure that the load is spread across multiple servers

@@ -19,3 +19,6 @@ You are to report back all your findings to both the SOC manager and the Enginee
 - [**Defensive Security**](Defensive/Defensive.md): Implement alerts and thresholds you determined would be effective in Project 2.
 - [**Offensive Security**](Offensive/Offensive.md): Assess a vulnerable VM and verify that the Kibana rules work as expected.
 - [**Network Forensics**](Network/Network.md): Use Wireshark to analyze live malicious traffic on the wire.
+
+### Selected Presentation
+- [**Final Engagement - Defence**](Defensive_Final_Project_Presentation.pdf)
